@@ -31,7 +31,7 @@ class MapViewModel: ObservableObject {
         reverseGeocodeCoordinates(latitude: randomLat, longitude: randomLon) { address in
             let annotation = IdentifiableAnnotation(
                 coordinate: coordinate,
-                title: "Lat: \(randomLat), Lon: \(randomLon)",
+                title: "\(randomLat), \(randomLon)",
                 subtitle: address
             )
             DispatchQueue.main.async {

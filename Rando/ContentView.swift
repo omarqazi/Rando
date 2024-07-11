@@ -25,6 +25,9 @@ struct ContentView: View {
                 }
             }
             .edgesIgnoringSafeArea(.all)
+            
+            Text(viewModel.annotations.first?.title ?? "To generate a random location")
+            Text(viewModel.annotations.first?.subtitle ?? "Tap Below")
 
             Button(action: {
                 viewModel.generateRandomPoint()
