@@ -19,7 +19,12 @@ struct ContentView: View {
                     }
                     .onTapGesture {
                         if let title = annotation.title, let subtitle = annotation.subtitle {
-                            print("\(title) - \(subtitle)")
+                            let coordinate = annotation.coordinate
+                            let coord = CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
+                            let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: coord))
+                            mapItem.name = "Random Point"
+                            
+                            MKMapItem.openMaps(with: [mapItem], launchOptions: [:])
                         }
                     }
                 }
