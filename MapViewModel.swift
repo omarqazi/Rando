@@ -3,7 +3,7 @@ import MapKit
 import CoreLocation
 
 class MapViewModel: ObservableObject {
-    @Published var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 37.7749, longitude: -122.4194), span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
+    @Published var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 33.839608, longitude: -118.353496), span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2))
     @Published var annotations: [IdentifiableAnnotation] = []
     @Published var boundaryPolyline: MKPolyline?
     private var geocoder = CLGeocoder()
@@ -13,9 +13,9 @@ class MapViewModel: ObservableObject {
     }
 
     func generateRandomPoint() {
-        // Define the range for latitude and longitude for San Francisco land area
-        let latRange = (min: 37.708, max: 37.812)
-        let lonRange = (min: -123.0, max: -122.356)
+        // Define the range for latitude and longitude for Los Angeles land area
+        let latRange = (min: 33.8056798, max: 33.9279781)
+        let lonRange = (min: -118.4226156, max: -118.3340155)
         
         var randomLat: Double
         var randomLon: Double
