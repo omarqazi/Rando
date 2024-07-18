@@ -7,7 +7,8 @@ struct PlayBoundary {
         CLLocationCoordinate2D(latitude: 33.8056798, longitude: -118.3893047),
         CLLocationCoordinate2D(latitude: 33.9279781, longitude: -118.4226156),
         CLLocationCoordinate2D(latitude: 33.9265537, longitude: -118.3673264),
-        CLLocationCoordinate2D(latitude: 33.8056798, longitude: -118.3340155)
+        CLLocationCoordinate2D(latitude: 33.8056798, longitude: -118.3340155),
+        CLLocationCoordinate2D(latitude: 33.8056798, longitude: -118.3893047),
     ]
     
     static func contains(coordinate: CLLocationCoordinate2D) -> Bool {
